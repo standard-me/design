@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import Button from '../components/01_atoms/Button'
+import Button from '../../components/01_atoms/Button'
 
 const meta = {
     title: 'atoms/Button',
@@ -28,7 +28,7 @@ const meta = {
         },
     },
 
-    args: { onClick: fn() },
+    args: { onClickButton: fn() },
 } satisfies Meta<typeof Button>
 
 export default meta

@@ -5,12 +5,12 @@ type colorType = 'basic' | 'soda' | 'banila' | 'hot-pink' | 'pink'
 export interface IButtonProps {
     text: string
     type?: buttonType
-    onClick: React.MouseEventHandler<HTMLButtonElement>
+    onClickButton: React.MouseEventHandler<HTMLButtonElement>
     color: colorType
     reverse?: boolean
 }
 
-const Button = ({ text, type = 'basic', color, reverse = false, onClick }: IButtonProps) => {
+const Button = ({ text, type = 'basic', color, reverse = false, onClickButton }: IButtonProps) => {
     const buttonType = {
         basic: '',
         text: 'border-transparent bg-transparent',
@@ -32,7 +32,7 @@ const Button = ({ text, type = 'basic', color, reverse = false, onClick }: IButt
                         ${buttonType[type]} 
                         ${colorType[color]}
                       `}
-            onClick={onClick}
+            onClick={onClickButton}
         >
             {text}
         </button>
