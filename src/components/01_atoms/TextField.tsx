@@ -65,6 +65,7 @@ const Input = ({
                     // console.log(e.target.files)
                 }
             }}
+            aria-label={`${type} 입력란`}
         />
     )
 }
