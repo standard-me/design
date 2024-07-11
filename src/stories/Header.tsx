@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from '../components/01_atoms/Button'
+import Button from '../components/01_atoms/TextButton'
 import './header.css'
 
 type User = {
