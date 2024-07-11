@@ -1,7 +1,7 @@
 export interface ILabelProps {
     text: string
     htmlFor: string
-    className: string
+    className?: string
 }
 const Label = ({ text, htmlFor, className }: ILabelProps) => {
     return (

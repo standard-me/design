@@ -6,11 +6,11 @@ export interface IButtonProps {
     text: string
     type?: buttonType
     onClickButton: React.MouseEventHandler<HTMLButtonElement>
-    color: colorType
+    color?: colorType
     reverse?: boolean
 }
 
-const TextButton = ({ text, type = 'basic', color, reverse = false, onClickButton }: IButtonProps) => {
+const TextButton = ({ text, type = 'basic', color = 'basic', reverse = false, onClickButton }: IButtonProps) => {
     const buttonType = {
         basic: '',
         text: 'border-transparent bg-transparent',

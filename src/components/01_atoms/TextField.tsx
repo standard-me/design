@@ -4,12 +4,12 @@ type TextFieldType = 'text' | 'number' | 'password' | 'search' | 'tel' | 'url' |
 export interface ITextFieldProps {
     id: string
     type: TextFieldType
-    value: string | number
+    value?: string | number
     name: string
-    className: string
-    placeholder: string
-    disabled: boolean
-    accept: string
+    className?: string
+    placeholder?: string
+    disabled?: boolean
+    accept?: string
     onKeyUpEnter?: () => void
     onChangeInput: (
         event: React.KeyboardEvent | React.ChangeEvent,
