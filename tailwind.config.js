@@ -2,7 +2,18 @@
 export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'light-gray': '#dddddd',
+                'dark-gray': '#333333',
+                primary: '#005E88',
+                secondary: '',
+                'hot-pink': '#FF90BC',
+                pink: '#FFC0D9',
+                banila: '#F9F9E0',
+                soda: '#8ACDD7',
+            },
+        },
         fontSize: {
             xs: [
                 '0.75rem',
