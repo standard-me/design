@@ -10,7 +10,7 @@ export interface IButtonProps {
     reverse?: boolean
 }
 
-const Button = ({ text, type = 'basic', color, reverse = false, onClickButton }: IButtonProps) => {
+const TextButton = ({ text, type = 'basic', color, reverse = false, onClickButton }: IButtonProps) => {
     const buttonType = {
         basic: '',
         text: 'border-transparent bg-transparent',
@@ -39,4 +39,4 @@ const Button = ({ text, type = 'basic', color, reverse = false, onClickButton }:
     )
 }
 
-export default Button
+export default TextButton
