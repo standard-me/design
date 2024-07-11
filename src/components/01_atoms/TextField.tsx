@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 type TextFieldType = 'text' | 'number' | 'password' | 'search' | 'tel' | 'url' | 'file'
-export interface IInputProps {
+export interface ITextFieldProps {
     id: string
     type: TextFieldType
     value: string | number
@@ -30,7 +30,7 @@ const Input = ({
     onKeyUpEnter,
     onChangeInput,
     setState,
-}: IInputProps) => {
+}: ITextFieldProps) => {
     const [text, setText] = useState('')
     // story book only
     useEffect(() => {
