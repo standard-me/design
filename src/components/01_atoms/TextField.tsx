@@ -17,6 +17,7 @@ export interface IInputProps {
     ) => void
     setState: () => void // React.Dispatch<React.SetStateAction<string>>
 }
+
 const Input = ({
     id,
     type = 'text',
@@ -41,7 +42,12 @@ const Input = ({
             type={type}
             value={text ? text : value}
             name={name}
-            className={className}
+            className={`
+                rounded-[5px]
+                py-3 px-4 text-xl
+                border-2 border-dark-gray 
+                ${className}
+                `}
             placeholder={placeholder}
             disabled={disabled}
             accept={accept}
