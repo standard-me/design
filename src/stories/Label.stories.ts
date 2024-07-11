@@ -9,9 +9,9 @@ const meta = {
     },
     tags: ['autodocs'],
     argTypes: {
-        label: {
+        text: {
             control: 'text',
-            description: '라벨의 이름',
+            description: '라벨의 표기 이름',
             defaultValue: 'LABEL',
         },
         htmlFor: {
@@ -35,7 +35,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
     args: {
-        label: 'TEXT',
+        text: 'TEXT',
         htmlFor: '',
         className: '',
     },

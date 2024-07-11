@@ -1,12 +1,12 @@
 export interface ILabelProps {
-    label: string
+    text: string
     htmlFor: string
     className: string
 }
-const Label = ({ label, htmlFor, className }: ILabelProps) => {
+const Label = ({ text, htmlFor, className }: ILabelProps) => {
     return (
         <label className={`${className}`} htmlFor={htmlFor}>
-            {label}
+            {text}
         </label>
     )
 }
