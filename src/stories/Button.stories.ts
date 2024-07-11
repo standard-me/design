@@ -1,52 +1,44 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-import { Button } from './Button';
+import type { Meta, StoryObj } from '@storybook/react'
+import { fn } from '@storybook/test'
+import Button from '../components/01_atoms/Button'
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Example/Button',
-  component: Button,
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
-  },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+    title: 'atoms/Button',
+    component: Button,
+    parameters: {
+        layout: 'centered',
+    },
+    tags: ['autodocs'],
+    argTypes: {
+        text: {
+            control: 'text',
+            description: '버튼의 표기 이름',
+        },
+        type: {
+            control: 'select',
+            description: '버튼 유형 타입',
+        },
+        color: {
+            control: 'select',
+            description: '버튼 색상',
+        },
+        reverse: {
+            control: 'boolean',
+            description: '버튼 반전',
+        },
+    },
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+    args: { onClick: fn() },
+} satisfies Meta<typeof Button>
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
-};
+export default meta
+type Story = StoryObj<typeof meta>
 
-export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-};
+export const Default: Story = {
+    args: {
+        text: 'Button',
+        type: 'basic',
+        color: 'basic',
+        reverse: false,
+    },
+}
