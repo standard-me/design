@@ -17,7 +17,7 @@ export interface ITextFieldProps {
     ) => void
     setState: () => void // React.Dispatch<React.SetStateAction<string>>
 }
-
+// TODO : more styling
 const Input = ({
     id,
     type = 'text',

@@ -1,9 +1,9 @@
 // import React from 'react'
-type imageSize = 'small' | 'medium' | 'large'
+type SizeType = 'small' | 'medium' | 'large'
 export interface IAvatarProps {
     src: string
     alt: string
-    size?: imageSize
+    size?: SizeType
 }
 const Avatar = ({ src, alt, size = 'medium' }: IAvatarProps) => {
     const imageSize = {

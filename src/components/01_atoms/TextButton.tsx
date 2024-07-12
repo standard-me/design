@@ -1,12 +1,12 @@
 import React from 'react'
-type buttonType = 'basic' | 'text' | 'link'
-type colorType = 'basic' | 'soda' | 'banila' | 'hot-pink' | 'pink'
+type ButtonType = 'basic' | 'text' | 'link'
+type ColorType = 'basic' | 'soda' | 'banila' | 'hot-pink' | 'pink'
 
 export interface IButtonProps {
     text: string
-    type?: buttonType
+    type?: ButtonType
     onClickButton: React.MouseEventHandler<HTMLButtonElement>
-    color?: colorType
+    color?: ColorType
     reverse?: boolean
 }
 
